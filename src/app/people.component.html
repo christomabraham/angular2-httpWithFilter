@@ -1,0 +1,17 @@
+
+  <input #input placeholder="Search" id="search">
+  <div class="table">
+  <div class="header">
+    <div class="cell cell1">Member Id</div>
+    <div class="cell cell2">Name</div>
+    <div class="cell cell3">Age</div>
+    <div class="cell cell3">Sex</div>
+  </div>
+  <div class="rowGroup" *ngFor="let member of members | searchPipe:  input.value ">
+    <div class="row">
+      <div class="cell cell1">{{member.id}}</div>
+      <div class="cell cell2">{{member.fName}} {{member.lName}}</div>
+      <div class="cell cell3">{{member.age}}</div>
+      <div class="cell cell3">{{member.sex}}</div>
+    </div>
+  </div>
